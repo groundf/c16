@@ -29,8 +29,8 @@ class Point2:
         return hash([self.x, self.y])
 
 
-def Point3(Point2):
-    def __init__(self, x, y, z):
+class Point3(Point2):
+    def __init__(self, x, y, z) -> None:
         super().__init__(x, y)
         self._z = z
 

@@ -1,17 +1,6 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# For the full list of built-in configuration values, see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
-
-# -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-
-project = 'cs1p'
-copyright = '2023, DL'
-author = 'DL'
-
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+project = 'Python Course'
+copyright = '2024, David Landa'
+author = 'David Landa'
 
 extensions = [
     "myst_parser", # https://github.com/executablebooks/MyST-NB/issues/421

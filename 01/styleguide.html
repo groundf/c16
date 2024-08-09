@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide for Python &mdash; Python Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python Course
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginner</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1.0-overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.0-prerequisites.html">Prerequisites</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Guide for Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/01/styleguide.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="guide-for-python">
+<h1>Guide for Python<a class="headerlink" href="#guide-for-python" title="Link to this heading"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">[]</span>&#160; <span class="pre">=</span> <span class="pre">schváleno</span></code>, <code class="docutils literal notranslate"><span class="pre">[x]</span> <span class="pre">=</span> <span class="pre">neschváleno</span></code></p>
+<section id="inspirace">
+<h2>Inspirace<a class="headerlink" href="#inspirace" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://github.com/realpython/python-guide</p></li>
+</ul>
+</section>
+<section id="working-with-file-system">
+<h2>Working with File System<a class="headerlink" href="#working-with-file-system" title="Link to this heading"></a></h2>
+<p>It is strongly recommended to use the <code class="docutils literal notranslate"><span class="pre">pathlib</span></code> library.</p>
+</section>
+<section id="module">
+<h2>Module<a class="headerlink" href="#module" title="Link to this heading"></a></h2>
+<section id="pravidla">
+<h3>Pravidla<a class="headerlink" href="#pravidla" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Modul musí obsahovat informaci o kódování <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">-*-</span> <span class="pre">coding:</span> <span class="pre">utf-8</span> <span class="pre">-*-</span></code>.</p></li>
+<li><p>Modul musí obsahovat dokumentační komentář.</p></li>
+<li><p>Modul musí obsahovat magickou proměnnou <code class="docutils literal notranslate"><span class="pre">__all__</span></code> s exportovanými objekty.
+Proměnná <code class="docutils literal notranslate"><span class="pre">__all__</span></code> musí být zapsána jako n-tice a nesmí obsahovat objekty s názvem začínajícím podtržítkem.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="c1"># bad</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># good</span>
+</pre></div>
+</div>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">__all__</span></code> obsahuje jen třídy a funkce bez podtržítek.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;_Protected&quot;</span><span class="p">,</span> <span class="s2">&quot;_protected&quot;</span><span class="p">)</span>      <span class="c1"># bad</span>
+ <span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;CONSTANT&quot;</span><span class="p">,</span> <span class="s2">&quot;Class&quot;</span><span class="p">,</span> <span class="s2">&quot;function&quot;</span><span class="p">)</span> <span class="c1"># good</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__all__</span></code> obsahuje všechny třídy bez podtržítek, které jsou v modulu obsaženy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__all__</span></code> obsahuje jako poslední prvek <code class="docutils literal notranslate"><span class="pre">DONT_USE_WILD_IMPORT</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Tip: Pište názvy funkcí, tříd a konstant prefixované s podtržítkem, dokud není jasné, že jde o veřejnou funkci, kterou uvádíme v <strong>all</strong>.
+Je vždy snažší odebrat podtržítko než naopak zpětně neveřejné objekty doplnit podtržítkem.</p>
+</section>
+<section id="string">
+<h3>String<a class="headerlink" href="#string" title="Link to this heading"></a></h3>
+<p>Používej F-strings https://www.python.org/dev/peps/pep-0498/</p>
+</section>
+<section id="cleneni-modulu">
+<h3>Členění modulu<a class="headerlink" href="#cleneni-modulu" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># -*- coding: utf-8 -*-
+
+&quot;&quot;&quot; Module documantation comment&quot;&quot;&quot;
+ 
+__all__ = (function, class)
+
+# Public objects
+
+function
+class
+
+# Private objects
+
+_function
+_class
+</pre></div>
+</div>
+</section>
+</section>
+<section id="testovani">
+<h2>Testování<a class="headerlink" href="#testovani" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>[] Používej balík <a class="reference external" href="https://docs.pytest.org/en/latest/contents.html">pytest</a> pro psaní samostatných (jednotkových) testů.</p></li>
+<li><p>[] Používej modul <a class="reference external" href="https://docs.python.org/3/library/doctest.html">doctest</a> pro prototypování a příklad, jak kód používat.</p></li>
+<li><p>[]</p></li>
+</ul>
+</section>
+<section id="formatovani">
+<h2>Formátování<a class="headerlink" href="#formatovani" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>[] Používej balík <a class="reference external" href="https://black.readthedocs.io/en/stable/">black</a> pro automatické formátování kódu.</p></li>
+</ul>
+</section>
+<section id="vytvoreni-projektu">
+<h2>Vytvoření projektu<a class="headerlink" href="#vytvoreni-projektu" title="Link to this heading"></a></h2>
+</section>
+<section id="prvni-veci-k-rozhodnuti">
+<h2>První věci k rozhodnutí<a class="headerlink" href="#prvni-veci-k-rozhodnuti" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Dělám knihovnu anebo aplikaci?</p></li>
+</ul>
+<section id="zakladni-struktura-projektu-baliku">
+<h3>Základní struktura projektu (balíku)<a class="headerlink" href="#zakladni-struktura-projektu-baliku" title="Link to this heading"></a></h3>
+<p>Pro vytvoření balíčku použijeme např. <em>coockiecutter</em>.</p>
+<p>Každý projekt obsahuje tyto adresáře a soubory:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">README.{md|rst}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LICENSE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.editorconfig</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.py</span></code> + <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Pipfile</span></code> + <code class="docutils literal notranslate"><span class="pre">Pipfile.lock</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pytest.ini</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examples/</span></code></p></li>
+</ul>
+<p>Použití <em>git hooks</em>.</p>
+</section>
+</section>
+<section id="vytvoreni-balicku">
+<h2>Vytvoření balíčku<a class="headerlink" href="#vytvoreni-balicku" title="Link to this heading"></a></h2>
+</section>
+<section id="testovani-pytest">
+<h2>Testování (Pytest)<a class="headerlink" href="#testovani-pytest" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Každá veřejná třída, metoda, funkce má dokumentační komentář.</p></li>
+<li><p>Každý dokumentační komentář je testován pomocí modulu doctest nebo pytest.</p></li>
+</ul>
+<section id="pytest-mark">
+<h3><code class="docutils literal notranslate"><span class="pre">pytest.mark</span></code><a class="headerlink" href="#pytest-mark" title="Link to this heading"></a></h3>
+<p>Pokud chceme použít modul-level marker:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="n">pytestmark</span> <span class="o">=</span> <span class="n">pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">mymarkername</span>
+</pre></div>
+</div>
+<p>Spuštění provedeme</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py.test<span class="w"> </span>-m<span class="w"> </span>mymarkname
+</pre></div>
+</div>
+</section>
+<section id="pytest-parametrize">
+<h3><code class="docutils literal notranslate"><span class="pre">pytest.parametrize</span></code><a class="headerlink" href="#pytest-parametrize" title="Link to this heading"></a></h3>
+</section>
+</section>
+</section>
+<section id="zalozeni-projektu">
+<h1>Založení projektu<a class="headerlink" href="#zalozeni-projektu" title="Link to this heading"></a></h1>
+<p>Pro založení projektu, vytvoření virtálního prostředí a správu závislostí používáme nástroj Pipenv https://poetry.eustace.io/
+(Dříve jsme oužívali Pipenv, který se nám v mnoha ohledech neosvědčil). Tím se můžeme zbavit souborů setup.py, setup.cfg, MANIFEST a podobně</p>
+<ul class="simple">
+<li><p>http://andrewsforge.com/article/python-new-package-landscape/</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Landa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

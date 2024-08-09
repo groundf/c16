@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jak začít s Pythonem &mdash; Python Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python Course
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginner</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1.0-overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.0-prerequisites.html">Prerequisites</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Jak začít s Pythonem</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/01/virtual-environment.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jak-zacit-s-pythonem">
+<h1>Jak začít s Pythonem<a class="headerlink" href="#jak-zacit-s-pythonem" title="Link to this heading"></a></h1>
+<section id="python-instalace-windows-7">
+<h2>Python Instalace Windows 7+<a class="headerlink" href="#python-instalace-windows-7" title="Link to this heading"></a></h2>
+<p>Nainstalujeme 64-bit verzi Python interpreteru, který stáhneme z webu projektu.
+Při instalacu nezapomene vybrat možnost “Add Python to Path”.</p>
+<p>Z příkazové řádky by nyní měl být dostupný</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ where python
+C:\Users\{username}\AppData\Local\Programs\Python\Python37\python.exe
+
+python --version
+Python 3.7.0
+</pre></div>
+</div>
+<p>Pro instalaci balíčků se používá pip, ale hned na zčátek upozorním, že ho bueme používat jen vyjímčně a místo něho budeme používat nástroj Pipenv.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m pip --version
+pip 18.0 from C:\Users\{username}\AppData\Local\Programs\Python\Python37\lib\site-packages\pip (python 3.7)
+
+$ python -m pip3 --version
+C:\Users\{username}\AppData\Local\Programs\Python\Python37\python.exe: No module named pip3
+</pre></div>
+</div>
+</section>
+<section id="upgrading-pip-on">
+<h2>Upgrading pip on<a class="headerlink" href="#upgrading-pip-on" title="Link to this heading"></a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m pip install --upgrade pip
+</pre></div>
+</div>
+</section>
+<section id="pouziti-balicku-venv-ze-standardni-knihovny">
+<h2>2. Použití balíčku <code class="docutils literal notranslate"><span class="pre">venv</span></code> ze standardní knihovny<a class="headerlink" href="#pouziti-balicku-venv-ze-standardni-knihovny" title="Link to this heading"></a></h2>
+<p><strong>Tohle je pořád využívaný, ale již v budoucnu tzv. <em>old school style</em>.</strong></p>
+<p>Pro vytvoření virtuálního prostředí nám postačí modul <code class="docutils literal notranslate"><span class="pre">venv</span></code>, který je od verze 3.5 (?) součástí standardní knihovny. Jistě víte, že hodně modulů, kromě toho, že je můžeme použít (importovat) ve vlastním programu, může sloužit také jako klasický konzolový program a to tak, že do kódu přidáme známou sekci <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__:</span> <span class="pre">...</span></code>. Pokud se nacházíme v adresáři našeho projektu můžeme jednoduše zavolat modul <code class="docutils literal notranslate"><span class="pre">venv</span></code> s parametry a ten nám vytvoří adresář obsahující kopii interpretru a knihoven.</p>
+<p>Vytvoříme adresář, který obsahuje jak interpretr, tak standardní knihovnu izolovanou od globální instalace.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python3.6 -m venv env
+</pre></div>
+</div>
+<p>Po aktivace, se vše již instaluje do aktuálního virtuální prostředí.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>source env/bin/activate
+</pre></div>
+</div>
+<p>Nyní můžeme instaloval zvolené knihovny.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install request
+</pre></div>
+</div>
+<p>Pozor, před každou prací, musíme toto virtuální prostředí aktivovat. Po přemístění adresáře <code class="docutils literal notranslate"><span class="pre">env</span></code> nám nebude virtuální prostředí správně fungovat, protože vše je provázané odkazy. Je lepší ho vytvořit prostě znovu.</p>
+<section id="zamknuti-aktualne-instalovanych-zavislosti">
+<h3>Zamknutí aktuálně instalovaných závislosti<a class="headerlink" href="#zamknuti-aktualne-instalovanych-zavislosti" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip freeze &gt; requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="popis-nevyhod-tohoto-zpusobu-aneb-proc-pouzivat-pipenv">
+<h3>Popis nevýhod tohoto způsobu aneb proč používat <code class="docutils literal notranslate"><span class="pre">pipenv</span></code><a class="headerlink" href="#popis-nevyhod-tohoto-zpusobu-aneb-proc-pouzivat-pipenv" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="tvorba-balicku-lokalne-pouziti-v-jinych-baliccich">
+<h2>Tvorba  balíčku lokálně – použití  v jiných balíčcích.<a class="headerlink" href="#tvorba-balicku-lokalne-pouziti-v-jinych-baliccich" title="Link to this heading"></a></h2>
+<p>TODO</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Landa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

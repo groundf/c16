@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poznámky k Pythonu + kuchařka &mdash; Python Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python Course
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginner</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1.0-overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.0-prerequisites.html">Prerequisites</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Poznámky k Pythonu + kuchařka</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/01/styleguide2.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="poznamky-k-pythonu-kucharka">
+<h1>Poznámky k Pythonu + kuchařka<a class="headerlink" href="#poznamky-k-pythonu-kucharka" title="Link to this heading"></a></h1>
+<section id="jak-organizovat-projekt-obsahujici-jupyter-notebooks-analyzy">
+<h2>Jak organizovat projekt obsahující Jupyter notebooks analýzy<a class="headerlink" href="#jak-organizovat-projekt-obsahujici-jupyter-notebooks-analyzy" title="Link to this heading"></a></h2>
+<p>???</p>
+<ul class="simple">
+<li><p>Use the typing module whenever it possible.
+https://docs.python.org/3/library/typing.html</p></li>
+<li><p>https://medium.com/&#64;hwayne/stupid-python-tricks-abusing-explicit-self-53d46b72e9e0</p></li>
+<li><p>https://medium.com/&#64;hwayne/stupid-python-tricks-abusing-explicit-self-53d46b72e9e0</p></li>
+</ul>
+<p>https://github.com/google/yapf
+https://packaging.python.org/guides/single-sourcing-package-version/</p>
+<p>https://www.geeksforgeeks.org/transpose-matrix-single-line-python/
+#The list of lists
+list_of_lists = [range(4), range(7)]
+flattened_list = []</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#flatten the lis
+for x in list_of_lists:
+    for y in x:
+        flattened_list.append(y)
+
+        #The list of lists
+list_of_lists = [range(4), range(7)]
+
+#flatten the lists
+flattened_list = [y for x in list_of_lists for y in x]
+
+flattenedlist = sum(listof_lists, [])
+import itertools
+flattened_list  = list(itertools.chain(*list_of_lists))
+</pre></div>
+</div>
+<p>Do you know there is a negative zero float value?
+https://hackernoon.com/negative-zero-bbd5fd790af3</p>
+<p>blank lines should never precede any docstring, and should only follow a docstring when it is for a class.
+https://stackoverflow.com/questions/18914108/python-pep-blank-line-after-function-definition</p>
+<p>Není nutné psát extra práyný řádek před koncem víceřídkového docstringu.
+https://github.com/PyCQA/pydocstyle/pull/64
+https://openstack.nimeyo.com/28010/openstack-dev-hacking-extra-blank-line-multi-line-docstring?start=10</p>
+<ul class="simple">
+<li><p>How to write setup.py</p></li>
+<li><p>Do I need requirements.txt?</p></li>
+<li><p>Application entry point</p></li>
+<li><p>Interractive shell</p></li>
+</ul>
+<p>Tohle se stane kdzž jsou někde relativní importz a tz chceš použít metioud <code class="docutils literal notranslate"><span class="pre">exec</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Processing c:\users\dlanda\projects\personal\py_apsg
+    Complete output from command python setup.py egg_info:
+    Traceback (most recent call last):
+      File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+      File &quot;C:\Users\dlanda\AppData\Local\Temp\pip-req-build-evm_bc53\setup.py&quot;, line 26, in &lt;module&gt;
+        exec(f.read(), package)
+      File &quot;&lt;string&gt;&quot;, line 4, in &lt;module&gt;
+    KeyError: &quot;&#39;__name__&#39; not in globals&quot;
+</pre></div>
+</div>
+<p>Difference between extras_require() and install_requires() in setup.py?</p>
+<ul>
+<li><p>Write examples and shor tutorials to the module documentation string and use some script to extract.
+It can be tested via doctest or exported to jupuyter notebook.</p>
+<p>“””
+Contains the vector types and related functions for vector algebra.</p>
+<p>Examples:</p>
+<p>Create a vector with given elements.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>v = Vector(1, 2, 3)
+v
+‘Vector(1, 2, 3)’</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>“””</p>
+</li>
+</ul>
+</section>
+<section id="struktura-projektu">
+<h2>Struktura projektu<a class="headerlink" href="#struktura-projektu" title="Link to this heading"></a></h2>
+<p>Každý projekt má následující strukturu.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>src/
+	{package_name}/
+		...
+tests/
+	...
+setup.py
+README.md
+LICENSE.txt
+</pre></div>
+</div>
+</section>
+<section id="import-modulu">
+<h2>Import modulů<a class="headerlink" href="#import-modulu" title="Link to this heading"></a></h2>
+<section id="zamezte-pouzivani-tzv-wild-importu">
+<h3>Zamezte používání tzv. <em>wild</em> importu.<a class="headerlink" href="#zamezte-pouzivani-tzv-wild-importu" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from module import *
+</pre></div>
+</div>
+<p>Přidáme do <code class="docutils literal notranslate"><span class="pre">__all__</span></code> neexistující symbol, který zamezí používání <em>wild</em> importu.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>__all__ = (&#39;DO_NOT_WILD_IMPORT&#39;)
+</pre></div>
+</div>
+<section id="odkazy">
+<h4>Odkazy<a class="headerlink" href="#odkazy" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="http://xion.io/post/code/python-all-wild-imports.html">http://xion.io/post/code/python-all-wild-imports.html</a></p></li>
+</ul>
+<p>Poznámka: Pokud chcete zakázat</p>
+<p>Possible to use more than one argument on <strong>getitem</strong>?</p>
+</section>
+</section>
+<section id="preferujte-import-celeho-modulu-namisto-jednotlivych-trid">
+<h3>Preferujte import celého modulu namísto jednotlivých tříd.<a class="headerlink" href="#preferujte-import-celeho-modulu-namisto-jednotlivych-trid" title="Link to this heading"></a></h3>
+<section id="duvod">
+<h4>Důvod<a class="headerlink" href="#duvod" title="Link to this heading"></a></h4>
+<p>protože ty jsou součástí modulu do kterého jsme importovali!</p>
+<p>NE
+from module import Class, function</p>
+<p>ANO</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import module
+import module as md # Pokud chceme např. zkrátit název.
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="timeit">
+<h2>timeit<a class="headerlink" href="#timeit" title="Link to this heading"></a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m timeit -s &quot;[ord(x) for x in &#39;abcdfghi&#39;]&quot;
+</pre></div>
+</div>
+<p>Zjistit všechny definované routy pro danou Flask aplikaci.</p>
+<p>o
+<code class="docutils literal notranslate"><span class="pre">__repr__</span></code> je povinný, <code class="docutils literal notranslate"><span class="pre">__str__</span></code> volitelný, nikdy ne naopak.
+Pokud objekt nemá definován <code class="docutils literal notranslate"><span class="pre">__str__</span></code> použije se <code class="docutils literal notranslate"><span class="pre">__str__</span></code> == <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p>
+<p>př.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+
+	<span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">return</span> <span class="s2">&quot;Point(</span><span class="si">{0}</span><span class="s2">, </span><span class="si">{1}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+	<span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nepoužívejte volání magických metod ani uvnitř samotné třídy, dokud to není opravdu třeba.</p>
+<p>Namísto obj.<strong>str</strong>(), obj.<strong>len</strong>(), obj.<strong>repr</strong>(), použijeme vestavěné funkce:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="poradi-metod-ve-tride">
+<h2>Pořadí metod ve třídě<a class="headerlink" href="#poradi-metod-ve-tride" title="Link to this heading"></a></h2>
+</section>
+<section id="pouziti-slots">
+<h2>Použití <code class="docutils literal notranslate"><span class="pre">__slots__</span></code><a class="headerlink" href="#pouziti-slots" title="Link to this heading"></a></h2>
+</section>
+<section id="python-style-guide">
+<h2>Python Style Guide<a class="headerlink" href="#python-style-guide" title="Link to this heading"></a></h2>
+<p>Metodám/Funkcím, které odpovídají na otázku Ano/Ne True/False říkáme predikáty.
+Pojmenováváme je např. s prefixem <code class="docutils literal notranslate"><span class="pre">is_</span></code>, <code class="docutils literal notranslate"><span class="pre">has_</span></code>, <code class="docutils literal notranslate"><span class="pre">can_</span></code>. V případě funkcí zřejmě musejí
+přebírat jeden nebo více argumentů. Pokud je predikát metoda, nemusí přebírat argument, protože může pracovat s proměnnou třídy nebo instance.</p>
+<p>př. funkce</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>is_male(person) -&gt; bool
+</pre></div>
+</div>
+<p>př. metody</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Person.is_male()
+</pre></div>
+</div>
+<p><strong>Kdy má/může být metoda property?</strong></p>
+<ul>
+<li><p>Pokud potřebujeme jen vracet hodnotu a neměnit stav třídy, pak volíme <code class="docutils literal notranslate"><span class="pre">property.getter</span></code>.</p>
+<p>dog.name</p>
+</li>
+<li><p>Pokud potřebujeme též měnit stav třídy a stačí nám k tomu jedinná hodnota, oak přidáme <code class="docutils literal notranslate"><span class="pre">property.setter</span></code></p>
+<p>dog.name = “Daisy”</p>
+<p>Poznámka: Obecně se snažíme po vutvoření neměnit stav objektu a dělám je tzv. <em>immutable</em>.</p>
+</li>
+</ul>
+<p>Pokud je to nějaká akce, která může měnit vnitřní stav tak preferujeme sémantiku volání funkce.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>person.set_addres
+</pre></div>
+</div>
+<p>Kdyz k tomu budes omylem pristupovat jako k properte misto metody, tak se to tise evalne na <code class="docutils literal notranslate"><span class="pre">True</span></code> a nevsimnes si toho</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>class C:
+    def get(self):
+        return False
+
+c = C()
+
+if c.get():
+    print(&quot;ERROR&quot;)
+
+if c.get:
+    print(&quot;ERROR&quot;)
+</pre></div>
+</div>
+<p>https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-1.1/bzwdh01d(v=vs.71)#cpconpropertyusageguidelinesanchor1
+https://stackoverflow.com/questions/1374273/when-to-use-properties-instead-of-functions
+https://martinfowler.com/bliki/CommandQuerySeparation.html</p>
+</section>
+<section id="navrh-knihovny">
+<h2>Návrh knihovny<a class="headerlink" href="#navrh-knihovny" title="Link to this heading"></a></h2>
+<p>Pokud nechceš, aby tvou třídu někdo rozšiřoval, neexportuj jí z modulu a namísto <code class="docutils literal notranslate"><span class="pre">__init__</span></code> vytvoř funcki stejného jména jako třída.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">_Point2</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coords</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">point2</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">_Point2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Landa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

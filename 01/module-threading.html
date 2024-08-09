@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concurrency with threading module &mdash; Python Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python Course
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginner</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1.0-overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.0-prerequisites.html">Prerequisites</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Concurrency with threading module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/01/module-threading.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="concurrency-with-threading-module">
+<h1>Concurrency with threading module<a class="headerlink" href="#concurrency-with-threading-module" title="Link to this heading"></a></h1>
+<p>Součástí základní knihovny jazyka Python je i modul <code class="docutils literal notranslate"><span class="pre">threading</span></code>, který nám umožňuje pracovat s vlákny. Vlákna umožňuj rozdělit program tak, že části běžcí v ruzných vláknech, mohou běžet souběžně (<em>concurrently</em>).</p>
+<p>Pokud pouštíme Python program, pak spouštíme vlastně kopii Python interpreteru (<code class="docutils literal notranslate"><span class="pre">python.exe</span></code>) jako jeden samostatný proces operačního systému.
+Uvnitř tohoto procesu se náš program spustí v hlavním vlákně (<em>main thread</em>).</p>
+<p>Toto vlákno je pravě vlákno operačního systému, což má svoje důsledky. Nejde tedy např. o takzvané virtuální (simulovaná) vlákna, jako můžeme najít v jiných jazycích, nazývaná např. <em>green threads</em> nebo <em>fibers</em> viz <a class="reference external" href="https://en.wikipedia.org/wiki/Green_thread">https://en.wikipedia.org/wiki/Green_thread</a>.</p>
+<p>V Pythonu existuje pro vlákna jedno omezení a to, že nemohou běžet paralelně, pouze souběžně!</p>
+<blockquote>
+<div><p>Because of Python’s Global Interpreter Lock (GIL), the threads within each python process cannot truly run in parallel, unlike threads in other programming languages such as Java, C/C++, and Go. For parallelism you have to create multiple processes, for this python comes with the multiprocessing module.</p>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Landa.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
